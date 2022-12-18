@@ -5,15 +5,15 @@ services:
     container_name: minecraft-server
     environment:
       EULA: "true"
-      TYPE: "paper"
-      VERSION: "1.19.2"
+      TYPE: ${SERVER_TYPE}
+      VERSION: ${SERVER_VERSION}
       CONSOLE: "false"
-      MOTD: "shriker Minecraft Server"
-      MEMORY: "2G"
-      SERVER_NAME: "shriker Server"
+      MOTD: ${SERVER_MOTD}
+      MEMORY: ${SERVER_MEMEORY}
+      SERVER_NAME: ${SERVER_NAME}
       OVERRIDE_SERVER_PROPERTIES: "true"
-      WHITELIST: "shriker95"
-      OPS: "shriker95"
+      WHITELIST: ${SERVER_WHITELIST}
+      OPS: ${SERVER_OPS}
       ENFORCE_WHITELIST: "true"
       ENABLE_RCON: "true"
     ports:
