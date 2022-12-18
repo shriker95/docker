@@ -1,0 +1,22 @@
+version: '3'
+services:
+  minecraft:
+    image: itzg/minecraft-server
+    container_name: minecraft-server
+    environment:
+      EULA: "true"
+      TYPE: "paper"
+      VERSION: "1.19.2"
+      CONSOLE: "false"
+      MOTD: "shriker Minecraft Server"
+      MEMORY: "2G"
+      SERVER_NAME: "shriker Server"
+      OVERRIDE_SERVER_PROPERTIES: "true"
+      WHITELIST: "shriker95"
+      OPS: "shriker95"
+      ENFORCE_WHITELIST: "true"
+      ENABLE_RCON: "true"
+    ports:
+      - 25565:25565
+    volumes:
+      - /opt/minecraft/data:/data
